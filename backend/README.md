@@ -22,3 +22,7 @@ $ virtualenv env
 ```
 $ sudo docker-compose run web django-admin startproject app .
 ```
+### aplication
+```
+$ sudo docker-compose run web python manage.py startapp app .
+```
