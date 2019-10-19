@@ -28,6 +28,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -61,14 +63,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'config.wsgi.application'
 
 
+#
+# Django REST framework
+#
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
+
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-# Install PyMySQL as mysqlclient/MySQLdb to use Django's mysqlclient adapter
-# See https://docs.djangoproject.com/en/2.1/ref/databases/#mysql-db-api-drivers
-# for more information
-import pymysql  # noqa: 402
-pymysql.install_as_MySQLdb()
 
 # setting with other setting file
 

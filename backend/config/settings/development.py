@@ -16,6 +16,12 @@ ALLOWED_HOSTS = ['0.0.0.0']
 
 
 
+# Install PyMySQL as mysqlclient/MySQLdb to use Django's mysqlclient adapter
+# See https://docs.djangoproject.com/en/2.1/ref/databases/#mysql-db-api-drivers
+# for more information
+import pymysql  # noqa: 402
+pymysql.install_as_MySQLdb()
+
 #
 # Local Docker
 # [START db_setup]
