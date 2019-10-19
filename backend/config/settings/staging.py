@@ -11,7 +11,7 @@ DATABASES = {
         'HOST': 'db', # docker
         # 'HOST': '127.0.0.1',
         'PORT': '3306',
-        'NAME': 'freespotbeauty',
+        'NAME': 'dbname',
         'USER': 'root',
         'PASSWORD': 'password',
     }
